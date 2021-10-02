@@ -5,6 +5,54 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Myclass</title>
+    <style>
+      @media (min-width: 1024px) {
+        .col-3 {
+          width: calc(100% / 3);
+        }
+      }
+
+      @media (min-width: 740px) and (max-width: 1023px) {
+        .col-2 {
+          width: 50%;
+        }
+      }
+
+      @media (max-width: 739px) {
+        .col {
+          width: 100%;
+        }
+      }
+      #vid-home::after {
+        content: "";
+        display: block;
+        visibility: hidden;
+        height: 0;
+        clear: both;
+        font-size: 0;
+      }
+      .video-container {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 */
+        margin-left: 4px;
+        margin-right: 4px;
+        height: 0;
+      }
+      .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+      .video-title {
+        padding: 8px;
+        text-align: center;
+        font-weight: bold;
+        font-size: 1.5em;
+        color: red;
+      }
+    </style>  
   </head>
   <body>
     <div
@@ -18,15 +66,9 @@
     >
       <h1>TẬP THỂ LỚP LTMT2-K12</h1>
     </div>
-    <div style="width: 100%">
-      <div
-        style="
-          width: 33%;
-          border: 1px solid green;
-          float: left;
-          border-radius: 3px;
-        "
-      >
+    <div id="vid-home">
+      <div class="col col-4 col-3 col-2">
+        <div class="video-container">
         <iframe
           width="100%"
           height="250"
@@ -37,8 +79,13 @@
           allowfullscreen
         >
         </iframe>
+        </div>
+        <div class="video-title">
+          Phạm Tài Linh
+        </div>
       </div>
-      <div style="width: 33%; border: 1px solid green; float: left">
+      <div class="col col-4 col-3 col-2">
+        <div class="video-container">
         <iframe
           width="100%"
           height="250"
@@ -48,8 +95,13 @@
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen
         ></iframe>
+          </div>
+          <div class="video-title">
+          Nguyễn Thanh An
+        </div>
       </div>
-      <div style="width: 33%; border: 1px solid green; float: left">
+      <div class="col col-4 col-3 col-2">
+        <div class="video-container">
         <iframe
           width="100%"
           height="250"
@@ -60,29 +112,14 @@
           allowfullscreen
         ></iframe>
       </div>
+        <div class="video-title">
+          Đào Thị Thảo
+        </div>
     </div>
 
-    <div style="width: 100%">
-      <div style="width: 33%; float: left; text-align: center; color: red">
-        <h2>Phạm Tài Linh</h2>
-      </div>
-      <div style="width: 33%; float: left; text-align: center; color: red">
-        <h2>Nguyễn Thanh An</h2>
-      </div>
-      <div style="width: 33%; float: left; text-align: center; color: red">
-        <h2>Đào Thị Thảo</h2>
-      </div>
-    </div>
 
-    <div style="width: 100%">
-      <div
-        style="
-          width: 33%;
-          border: 1px solid green;
-          float: left;
-          border-radius: 3px;
-        "
-      >
+    <div class="col col-4 col-3 col-2">
+        <div class="video-container">
         <iframe
           width="100%"
           height="250"
@@ -92,8 +129,13 @@
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen
         ></iframe>
+          </div>
+          <div class="video-title">
+          Nguyễn Thị Hằng
+        </div>
       </div>
-      <div style="width: 33%; border: 1px solid green; float: left">
+      <div class="col col-4 col-3 col-2">
+        <div class="video-container">
         <iframe
           width="100%"
           height="250"
@@ -103,8 +145,13 @@
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen
         ></iframe>
+          </div>
+          <div class="video-title">
+          LươngHuyềnHuyền
+        </div>
       </div>
-      <div style="width: 33%; border: 1px solid green; float: left">
+      <div class="col col-4 col-3 col-2">
+        <div class="video-container">
         <iframe
           width="100%"
           height="250"
@@ -114,30 +161,15 @@
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen
         ></iframe>
-      </div>
+         </div>
+         <div class="video-title">
+          Nguyễn Văn Hưng
+        </div>
     </div>
 
-    <div style="width: 100%">
-      <div style="width: 33%; float: left; text-align: center; color: red">
-        <h2>Nguyễn Thị Hằng</h2>
-      </div>
-      <div style="width: 33%; float: left; text-align: center; color: red">
-        <h2>Lương Thị Huyền</h2>
-      </div>
-      <div style="width: 33%; float: left; text-align: center; color: red">
-        <h2>Nguyễn Văn Hưng</h2>
-      </div>
-    </div>
 
-    <div style="width: 100%">
-      <div
-        style="
-          width: 33%;
-          border: 1px solid green;
-          float: left;
-          border-radius: 3px;
-        "
-      >
+    <div class="col col-4 col-3 col-2">
+        <div class="video-container">
         <iframe
           width="100%"
           height="250"
@@ -147,8 +179,13 @@
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen
         ></iframe>
+         </div>
+         <div class="video-title">
+          Trịnh Đình Huy
+        </div>
       </div>
-      <div style="width: 33%; border: 1px solid green; float: left">
+      <div class="col col-4 col-3 col-2">
+        <div class="video-container">
         <iframe
           width="100%"
           height="250"
@@ -158,8 +195,13 @@
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen
         ></iframe>
+         </div>
+         <div class="video-title">
+          Trần Văn Tuấn
+        </div>
       </div>
-      <div style="width: 33%; border: 1px solid green; float: left">
+      <div class="col col-4 col-3 col-2">
+        <div class="video-container">
         <iframe
           width="100%"
           height="250"
@@ -169,19 +211,12 @@
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen
         ></iframe>
-      </div>
+         </div>
+         <div class="video-title">
+          Phan Thị Ánh Chúc
+        </div>
     </div>
 
-    <div style="width: 100%">
-      <div style="width: 33%; float: left; text-align: center; color: red">
-        <h2>Trịnh Đình Huy</h2>
-      </div>
-      <div style="width: 33%; float: left; text-align: center; color: red">
-        <h2>Trần Văn Tuấn</h2>
-      </div>
-      <div style="width: 33%; float: left; text-align: center; color: red">
-        <h2>Phan Thị Ánh Chúc</h2>
-      </div>
     </div>
   </body>
 </html>
